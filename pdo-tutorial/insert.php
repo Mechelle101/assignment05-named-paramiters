@@ -2,8 +2,8 @@
 
 include 'connect.php';
 
-$stmt = $db->prepare("insert into names (firstname, lastname, postcode)
-                      values (:firstname, :lastname, :postcode)");
+$stmt = $db->prepare("INSERT INTO names (firstname, lastname, postcode)
+                      VALUES (:firstname, :lastname, :postcode)");
 
 $stmt->bindValue(':firstname', 'AnotherFirstName');
 $stmt->bindValue(':lastname', 'YetAnotherLastName');

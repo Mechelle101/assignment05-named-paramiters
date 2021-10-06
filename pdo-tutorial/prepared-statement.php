@@ -3,7 +3,7 @@
 include 'connect.php';
 
 //simple sql query and foreach loop
-$stmt = $db->prepare("SELECT * FROM names where firstname = ?");
+$stmt = $db->prepare("SELECT * FROM names WHERE firstname = ?");
 $names = array('Andy', 'Brian', 'Godfrey');
 $name = 'Colin';
 

@@ -2,7 +2,7 @@
 
 include 'connect.php';
 
-$stmt = $db->prepare("delete from names where firstname = :firstname");
+$stmt = $db->prepare("DELETE FROM names WHERE firstname = :firstname");
 
 $stmt->bindValue(':firstname', 'Brian');
 $stmt->execute();

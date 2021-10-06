@@ -3,7 +3,7 @@
 include 'connect.php';
 
 //simple sql query and foreach loop
-$stmt = $db->prepare("SELECT * FROM names where firstname = :firstname");
+$stmt = $db->prepare("SELECT * FROM names WHERE firstname = :firstname");
   //can put in a third parameter for the data type PDO::PARAM_STR
   $stmt->bindValue(':firstname', 'Andy');
 
