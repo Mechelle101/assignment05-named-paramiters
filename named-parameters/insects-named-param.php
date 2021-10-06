@@ -3,15 +3,16 @@
 include 'connect.php';
 
 //simple sql query and foreach loop 
-$stmt = $db->prepare("SELECT food FROM birds WHERE food = :food");
+$stmt = $db->prepare("SELECT common_name, food FROM birds WHERE food = :food");
   $stmt->bindValue(':food', 'insects');
   $stmt->execute();
 
+  echo "These birds like insects<br>";
   while($row = $stmt->fetch()) {
     
-    $food = htmlentities($row['food']);
+    $output = htmlentities($row['common_name']);
 
-    echo $food . "<br>";
+    echo $output . "<br>";
   }
 
 ?>
